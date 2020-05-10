@@ -11,33 +11,104 @@
     <link rel="stylesheet" href="">
 </head>
 <style>
-    div {
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        background: black;
+    }
+
+    /* div {
+        display: block;
+        position: absolute;
         height: 100px;
         width: 100px;
-        background: purple;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-weight: 200;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
+        border-radius: 50%;
+        background: none;
+        border: 3px solid white;
+
+    } */
 
     .boxLong {
         height: 8000px;
         background-color: grey;
     }
+
+    .form {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 50%;
+        border: 2px solid white;
+        width: 25px;
+        height: 25px;
+        margin-left: 15px;
+    }
+
+    input {
+
+        background: none;
+        color: white;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 800;
+        border-radius: 20px;
+        height: 30px;
+        width: 180px;
+        border: 3px solid white;
+    }
+
+    .ulwrapper {}
+
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .liwrapper {
+        font-weight: 800;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .formWrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 </style>
 
 <body>
-
+    <!-- 
     <div class="box box1">
-        Box1
-    </div>
-    <!-- <div class="boxLong">
-
-        loooongggggggg
     </div> -->
+
+
+
+    <div class="formWrapper">
+        <h1>Add your favorite character</h1>
+        <div class="form">
+            <input class="formData" type="text">
+            <button class="insert"><span>+</span></button>
+        </div>
+        <ul class="ulwrapper">
+            <li class="liwrapper">Sup<button class="deleteLi"><span>X</span></button></li>
+        </ul>
+    </div>
+
 
     <script src="index.js" async defer></script>
 </body>
