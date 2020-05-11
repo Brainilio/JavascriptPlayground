@@ -62,30 +62,71 @@
 let submit = document.querySelector(".insert");
 let formData = document.querySelector(".formData")
 let ul = document.querySelector('.ulwrapper')
-let delButton = document.querySelector('.deleteLi')
-
+let delButton = document.getElementsByTagName('button')
+let deleteButton = document.getElementsByClassName('deleteLi')
 let allListItems = document.getElementsByTagName('li')
+
 
 submit.addEventListener('click', () => {
 
     let li = document.createElement("li")
     li.classList.add('liwrapper')
 
+
+    let button = document.createElement("button")
+    button.classList.add('.deleteLi')
+    button.innerHTML = `<span>X</span>`
+
     if (formData.value == "") {
         console.log("Value is empty!")
     }
 
     else {
+
+
         li.innerHTML = formData.value;
+
         ul.appendChild(li);
+
         formData.value = "";
-        li.appendChild(delButton);
+
+        li.appendChild(button);
+
+        console.log("Added new item!")
+
+
+
+        for (let i = 0; i < allListItems.length; i++) {
+
+            delButton[i + 1].addEventListener('click', () => {
+                var parent = delButton[i + 1].parentElement
+
+
+
+                parent.remove();
+
+
+            })
+        }
+
+
     }
 
 })
 
-delButton.addEventListener('click', () => {
+
+for (let i = 0; i < allListItems.length; i++) {
+
+    delButton[i + 1].addEventListener('click', () => {
+        var parent = delButton[i + 1].parentElement
+
+        parent.remove();
+
+        // allListItems[i].remove();
+    })
+}
 
 
 
-})
+
+
